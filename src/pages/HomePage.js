@@ -55,13 +55,13 @@ const HomePage = () => {
     }, 60000);
     return () => clearInterval(interval)
     
-  },[])
+  },[])// eslint-disable-line react-hooks/exhaustive-deps
   
 
 
 
   let urlshistoryList = async()=>{
-    let response = await fetch('https://web-production-19c7.up.railway.app/createhistory/', {
+      await fetch('https://web-production-19c7.up.railway.app/createhistory/', {
         method:'POST',
         headers:{
             'Content-Type':'application/json',
@@ -69,13 +69,12 @@ const HomePage = () => {
         },
       })   
       
-      let data = await response.json()
   } 
 
 
   useEffect(() => {
     searchedUrls()
-  },[typeurl])
+  },[typeurl])// eslint-disable-line react-hooks/exhaustive-deps
   
 
 
@@ -127,7 +126,6 @@ const HomePage = () => {
         },
         body:JSON.stringify({"url_name":String(url)})
     })
-    let data = await response.json()
     
     if(response.status === 200){       
         searchedUrls()
@@ -205,7 +203,7 @@ const HomePage = () => {
           </div>
         ))}
 
-            {activeurls && urlslist.filter(url => url.status.includes('ACTIVE'))  .map((url) => (
+            {activeurls && urlslist.filter(url => url.status.includes('ACTIVE')).map((url) => (
                 <div className="urllist-container">
                   <h3 className="urllist-h3" key={url.id} onClick={() => {Previous.current = 1; Next.current=2;previousactive.current=true; nextactive.current=null;setHidehistory(true); urlHistory(url.url_name)}}><p className="urllist-p" >{url.url_name}</p> 
                     <button className="urllist-delete-btn" value="delete" onClick={() => deleteUrlHistory(url.url_name)}> delete </button>
@@ -214,7 +212,7 @@ const HomePage = () => {
               ))}
 
               {hidehistory&&(<><div><h1>History</h1>
-              {(urlshistory.length !=0) && urlshistory.map((url) => (
+              {(urlshistory.length !== 0) && urlshistory.map((url) => (
                 
                   <p className="urllist-h3" key={url.id}>{historyurl} &nbsp;&nbsp;{url.status} &nbsp;&nbsp; {url.created_at}
                   </p>
