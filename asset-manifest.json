@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/uptime-finder-react/static/css/main.4635d05e.css",
+    "main.js": "/uptime-finder-react/static/js/main.99b1231c.js",
+    "index.html": "/uptime-finder-react/index.html",
+    "main.4635d05e.css.map": "/uptime-finder-react/static/css/main.4635d05e.css.map",
+    "main.99b1231c.js.map": "/uptime-finder-react/static/js/main.99b1231c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4635d05e.css",
+    "static/js/main.99b1231c.js"
+  ]
+}
