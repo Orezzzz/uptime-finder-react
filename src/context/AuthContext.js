@@ -24,7 +24,7 @@ export const AuthProvider = ({children}) => {
         
         e.preventDefault();
         console.log('signup form submitted');
-        let response = await fetch('https://web-production-19c7.up.railway.app/register/', {
+        let response = await fetch('https://web-production-b17c.up.railway.app/register/', {
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -56,7 +56,7 @@ export const AuthProvider = ({children}) => {
         
         e.preventDefault();
         console.log('login form submitted');
-        let response = await fetch('https://web-production-19c7.up.railway.app/login/', {
+        let response = await fetch('https://web-production-b17c.up.railway.app/login/', {
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -111,7 +111,7 @@ export const AuthProvider = ({children}) => {
     
 
     let deletedUrlsList = async()=>{
-        let response = await fetch('https://web-production-19c7.up.railway.app/deletedurls/', {
+        let response = await fetch('https://web-production-b17c.up.railway.app/deletedurls/', {
             method:'GET',
             headers:{
                 'Content-Type':'application/json',

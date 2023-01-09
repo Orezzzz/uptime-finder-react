@@ -26,7 +26,7 @@ const HomePage = () => {
   let searchUrl = async (e) =>{
         
     e.preventDefault();
-    let response = await fetch('https://web-production-19c7.up.railway.app/create/', {
+    let response = await fetch('https://web-production-b17c.up.railway.app/create/', {
         method:'POST',
         headers:{
             'Content-Type':'application/json',
@@ -61,7 +61,7 @@ const HomePage = () => {
 
 
   let urlshistoryList = async()=>{
-      await fetch('https://web-production-19c7.up.railway.app/createhistory/', {
+      await fetch('https://web-production-b17c.up.railway.app/createhistory/', {
         method:'POST',
         headers:{
             'Content-Type':'application/json',
@@ -80,7 +80,7 @@ const HomePage = () => {
 
 
   let searchedUrls = async()=>{
-    let response = await fetch('https://web-production-19c7.up.railway.app/urlslist/', {
+    let response = await fetch('https://web-production-b17c.up.railway.app/urlslist/', {
         method:'GET',
         headers:{
             'Content-Type':'application/json',
@@ -97,7 +97,7 @@ const HomePage = () => {
         
     setHistoryurl(url)
 
-    let response = await fetch('https://web-production-19c7.up.railway.app/history/?page='+ (previousactive.current ? Previous.current:"") +(nextactive.current ? Next.current:""), {
+    let response = await fetch('https://web-production-b17c.up.railway.app/history/?page='+ (previousactive.current ? Previous.current:"") +(nextactive.current ? Next.current:""), {
         method:'POST',
         headers:{
             'Content-Type':'application/json',
@@ -118,7 +118,7 @@ const HomePage = () => {
 
   let deleteUrlHistory = async (url) =>{
         
-    let response = await fetch('https://web-production-19c7.up.railway.app/urlslist/', {
+    let response = await fetch('https://web-production-b17c.up.railway.app/urlslist/', {
         method:'DELETE',
         headers:{
             'Content-Type':'application/json',
