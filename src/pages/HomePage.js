@@ -52,7 +52,7 @@ const HomePage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       urlshistoryList()
-    }, 60000);
+    }, 6000);
     return () => clearInterval(interval)
     
   },[])// eslint-disable-line react-hooks/exhaustive-deps
